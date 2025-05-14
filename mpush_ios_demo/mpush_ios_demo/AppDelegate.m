@@ -14,7 +14,12 @@
 // iOS 10 notification
 #import <UserNotifications/UserNotifications.h>
 
+NSString *testAppKey = @"********";
+NSString *testAppSecret = @"********";
+
 @interface AppDelegate () <UNUserNotificationCenterDelegate>
+
+@property (nonatomic, assign) NSInteger SDKEnv;
 
 @end
 
@@ -25,6 +30,8 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // 获取SDK Config
+    [self fetchLocalConfig];
     // APNs注册，获取deviceToken并上报
     [self registerAPNS:application];
     // 初始化SDK
@@ -196,14 +203,41 @@
     // 正式上线建议关闭
     [CloudPushSDK setLogLevel:MPLogLevelDebug];
 
-    // SDK初始化，手动输出appKey和appSecret
-    [CloudPushSDK startWithAppkey:testAppKey appSecret:testAppSecret callback:^(CloudPushCallbackResult * _Nonnull res) {
-        if (res.success) {
-            NSLog(@"Push SDK init success, deviceId: %@.", [CloudPushSDK getDeviceId]);
-        } else {
-            NSLog(@"Push SDK init failed, error: %@", res.error);
-        }
-    }];
+    if (self.SDKEnv == 0) {
+        // 生产
+        [CloudPushSDK startWithAppkey:testAppKey appSecret:testAppSecret callback:^(CloudPushCallbackResult * _Nonnull res) {
+            if (res.success) {
+                NSLog(@"Push SDK init success, deviceId: %@.", [CloudPushSDK getDeviceId]);
+            } else {
+                NSLog(@"Push SDK init failed, error: %@", res.error);
+            }
+        }];
+    } else {
+        // 预发
+        NSString *elsHost = @"pre-emas-link-service.aliyuncs.com:9001";
+        NSString *vipHost = @"https://mpush-api-pre.aliyun.com/";
+        [CloudPushSDK startWithAppkey:testAppKey appSecret:testAppSecret elsHost:elsHost vipHost:vipHost callback:^(CloudPushCallbackResult * _Nonnull res) {
+            if (res.success) {
+                NSLog(@"Push SDK-Pre init success, deviceId: %@.", [CloudPushSDK getDeviceId]);
+            } else {
+                NSLog(@"Push SDK-Pre init failed, error: %@", res.error);
+            }
+        }];
+    }
+}
+
+- (void)fetchLocalConfig {
+    NSString *appKey = (NSString *)[CommonTools userDefaultGet:kAppKey];
+    NSString *secretKey = (NSString *)[CommonTools userDefaultGet:kSecretKey];
+    NSNumber *envIndexNumber = [CommonTools userDefaultGet:KSDKEnv];
+
+    if (!appKey || !secretKey || !envIndexNumber) {
+        return;
+    }
+
+    testAppKey = appKey;
+    testAppSecret = secretKey;
+    self.SDKEnv = [envIndexNumber integerValue];
 }
 
 #pragma mark Notification Open

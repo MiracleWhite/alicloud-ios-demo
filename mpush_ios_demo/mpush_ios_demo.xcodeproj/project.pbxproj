@@ -54,6 +54,9 @@
 		7ED131302D9D394C009C4900 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED746182D94087A00E039D3 /* WidgetKit.framework */; };
 		7ED131312D9D394C009C4900 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED7461A2D94087B00E039D3 /* SwiftUI.framework */; };
 		7ED1313E2D9D394D009C4900 /* mpush_liveActivity_extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7ED1312F2D9D394C009C4900 /* mpush_liveActivity_extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7ED1E1012DD32BE4003291A0 /* SDKConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED1E1002DD32BE4003291A0 /* SDKConfigViewController.m */; };
+		7ED1E1042DD341D8003291A0 /* CommonTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED1E1032DD341D8003291A0 /* CommonTools.m */; };
+		7ED1E1072DD345C9003291A0 /* ConfigsHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED1E1062DD345C9003291A0 /* ConfigsHistoryView.m */; };
 		7ED7468F2D969BE600E039D3 /* LiveActivityObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED7468E2D969BE600E039D3 /* LiveActivityObserver.swift */; };
 		7EDD2EB62CD1E22E00EE1883 /* AddTagTypeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDD2EB52CD1E22E00EE1883 /* AddTagTypeButton.m */; };
 		7EDD2EBE2CD2342700EE1883 /* AliasListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDD2EBD2CD2342700EE1883 /* AliasListViewController.m */; };
@@ -199,6 +202,12 @@
 		7ED130B22D9BEBD5009C4900 /* ActivityInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityInfoViewController.swift; sourceTree = "<group>"; };
 		7ED130B32D9BEBD5009C4900 /* ActivityInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityInfoViewController.xib; sourceTree = "<group>"; };
 		7ED1312F2D9D394C009C4900 /* mpush_liveActivity_extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = mpush_liveActivity_extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ED1E0FF2DD32BE4003291A0 /* SDKConfigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDKConfigViewController.h; sourceTree = "<group>"; };
+		7ED1E1002DD32BE4003291A0 /* SDKConfigViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDKConfigViewController.m; sourceTree = "<group>"; };
+		7ED1E1022DD341D8003291A0 /* CommonTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonTools.h; sourceTree = "<group>"; };
+		7ED1E1032DD341D8003291A0 /* CommonTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonTools.m; sourceTree = "<group>"; };
+		7ED1E1052DD345C9003291A0 /* ConfigsHistoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigsHistoryView.h; sourceTree = "<group>"; };
+		7ED1E1062DD345C9003291A0 /* ConfigsHistoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigsHistoryView.m; sourceTree = "<group>"; };
 		7ED746182D94087A00E039D3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		7ED7461A2D94087B00E039D3 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		7ED7468E2D969BE600E039D3 /* LiveActivityObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityObserver.swift; sourceTree = "<group>"; };
@@ -489,6 +498,10 @@
 				7E2C7C132CD4E0B3006CDFE5 /* TagsCollectionViewCell.m */,
 				7E2C7C0F2CD4DEB6006CDFE5 /* ShowAllTagsFlowLayout.h */,
 				7E2C7C102CD4DEB6006CDFE5 /* ShowAllTagsFlowLayout.m */,
+				7ED1E0FF2DD32BE4003291A0 /* SDKConfigViewController.h */,
+				7ED1E1002DD32BE4003291A0 /* SDKConfigViewController.m */,
+				7ED1E1052DD345C9003291A0 /* ConfigsHistoryView.h */,
+				7ED1E1062DD345C9003291A0 /* ConfigsHistoryView.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -505,6 +518,8 @@
 				7E287E5A2CCF668A009AB44F /* SQLiteManager.h */,
 				7E287E5B2CCF668A009AB44F /* SQLiteManager.m */,
 				7EDD2EC12CD3229A00EE1883 /* Macro.h */,
+				7ED1E1022DD341D8003291A0 /* CommonTools.h */,
+				7ED1E1032DD341D8003291A0 /* CommonTools.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -710,9 +725,7 @@
 					};
 					C99E765A1AC96B8B000BC567 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = VSW2PKYTD7;
 						LastSwiftMigration = 1620;
-						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -888,6 +901,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ED7468F2D969BE600E039D3 /* LiveActivityObserver.swift in Sources */,
+				7ED1E1012DD32BE4003291A0 /* SDKConfigViewController.m in Sources */,
 				7E287E5C2CCF668A009AB44F /* SQLiteManager.m in Sources */,
 				7E2E5CEE2CBCEDFC0030441B /* MessageTableViewCell.m in Sources */,
 				7EDD2EB62CD1E22E00EE1883 /* AddTagTypeButton.m in Sources */,
@@ -911,6 +925,7 @@
 				C93E19BF1ACBD0E800A90F3B /* PushMessage.m in Sources */,
 				7EF16B3A2CB8CD3B00256421 /* MessageViewController.m in Sources */,
 				7E10148F2CC8ECC30075F777 /* SettingTagTableViewCell.m in Sources */,
+				7ED1E1072DD345C9003291A0 /* ConfigsHistoryView.m in Sources */,
 				C9102D2B1ACED5B70094FCEC /* KoaPullToRefresh.m in Sources */,
 				7E10148C2CC73D4C0075F777 /* AliasAndTagView.m in Sources */,
 				C99E76641AC96B8B000BC567 /* AppDelegate.m in Sources */,
@@ -919,6 +934,7 @@
 				7ED130B42D9BEBD5009C4900 /* ActivityInfoViewController.swift in Sources */,
 				C99E76611AC96B8B000BC567 /* main.m in Sources */,
 				7EDD2EBE2CD2342700EE1883 /* AliasListViewController.m in Sources */,
+				7ED1E1042DD341D8003291A0 /* CommonTools.m in Sources */,
 				C9102D261ACED5B70094FCEC /* NSString+FontAwesome.m in Sources */,
 				7E2E5CFA2CBD20E80030441B /* UIColor+Hex.m in Sources */,
 				7ED130AF2D9A9DAE009C4900 /* ActivitiesTableViewCell.swift in Sources */,
@@ -1297,7 +1313,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = mpush_ios_demo/mpush_ios_demo.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -1339,7 +1355,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = mpush_ios_demo/mpush_ios_demo.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
