@@ -37,7 +37,7 @@
 - (void)fetchAndDisplayConfigs {
     NSString *appKey = (NSString *)[CommonTools userDefaultGet:kAppKey];
     NSString *secretKey = (NSString *)[CommonTools userDefaultGet:kSecretKey];
-    NSNumber *envIndexNumber = [CommonTools userDefaultGet:KSDKEnv];
+    NSNumber *envIndexNumber = [CommonTools userDefaultGet:kSDKEnv];
 
     if (!appKey || !secretKey || !envIndexNumber) {
         return;
@@ -78,9 +78,9 @@
     NSNumber *envIndexNumber = [[NSNumber alloc] initWithInteger:self.envSegment.selectedSegmentIndex];
     [CommonTools userDefaultSetObject:appKey forKey:kAppKey];
     [CommonTools userDefaultSetObject:secretKey forKey:kSecretKey];
-    [CommonTools userDefaultSetObject:envIndexNumber forKey:KSDKEnv];
+    [CommonTools userDefaultSetObject:envIndexNumber forKey:kSDKEnv];
 
-    NSMutableArray *configs = [(NSArray *)[CommonTools userDefaultGet:KConfigsHistory] mutableCopy];
+    NSMutableArray *configs = [(NSArray *)[CommonTools userDefaultGet:kConfigsHistory] mutableCopy];
     if (!configs) {
         configs = [NSMutableArray arrayWithCapacity:1];
     }
@@ -91,7 +91,7 @@
         @"env":[[NSNumber alloc] initWithInteger:self.envSegment.selectedSegmentIndex]
     };
     [configs addObject:config];
-    [CommonTools userDefaultSetObject:configs forKey:KConfigsHistory];
+    [CommonTools userDefaultSetObject:configs forKey:kConfigsHistory];
 
     // 弹框提示退出APP，给userDefault存储争取时间
     [CommonTools showTitle:@"提示" message:@"即将退出APP" handle:^(UIAlertAction * _Nonnull action) {

@@ -14,7 +14,7 @@
 }
 
 + (void)showHistoryList:(SelectionCallback)callBack {
-    NSArray *configs = [CommonTools userDefaultGet:KConfigsHistory];
+    NSArray *configs = [CommonTools userDefaultGet:kConfigsHistory];
     if (configs && configs.count > 0) {
         ConfigsHistoryView * configsListView = [[ConfigsHistoryView alloc] initWithData:configs];
         [configsListView show];

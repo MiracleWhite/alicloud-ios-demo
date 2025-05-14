@@ -17,7 +17,7 @@
 
 #define kAppKey @"pushSDKAppkey"
 #define kSecretKey @"pushSDKAppSecret"
-#define KSDKEnv @"pushSDKEnv"
-#define KConfigsHistory @"pushSDKConfigsHistory"
+#define kSDKEnv @"pushSDKEnv"
+#define kConfigsHistory @"pushSDKConfigsHistory"
 
 #endif /* Macro_h */

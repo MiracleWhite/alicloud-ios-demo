@@ -229,7 +229,7 @@ NSString *testAppSecret = @"********";
 - (void)fetchLocalConfig {
     NSString *appKey = (NSString *)[CommonTools userDefaultGet:kAppKey];
     NSString *secretKey = (NSString *)[CommonTools userDefaultGet:kSecretKey];
-    NSNumber *envIndexNumber = [CommonTools userDefaultGet:KSDKEnv];
+    NSNumber *envIndexNumber = [CommonTools userDefaultGet:kSDKEnv];
 
     if (!appKey || !secretKey || !envIndexNumber) {
         return;
