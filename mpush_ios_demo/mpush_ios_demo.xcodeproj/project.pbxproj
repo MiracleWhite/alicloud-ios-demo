@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -62,6 +62,13 @@
 		7EDD2EBE2CD2342700EE1883 /* AliasListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDD2EBD2CD2342700EE1883 /* AliasListViewController.m */; };
 		7EDD2EC02CD2343D00EE1883 /* AliasListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDD2EBF2CD2343D00EE1883 /* AliasListViewController.storyboard */; };
 		7EF16B3A2CB8CD3B00256421 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF16B392CB8CD3B00256421 /* MessageViewController.m */; };
+		7EFBDD3A2DD6E1D60021D340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EFBDD332DD6E1D60021D340 /* Assets.xcassets */; };
+		7EFBDD3C2DD6E1D60021D340 /* mpush_liveActivity_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBDD352DD6E1D60021D340 /* mpush_liveActivity_extension.swift */; };
+		7EFBDD3D2DD6E1D60021D340 /* mpush_liveActivity_extensionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBDD362DD6E1D60021D340 /* mpush_liveActivity_extensionBundle.swift */; };
+		7EFBDD3E2DD6E1D60021D340 /* mpushTakeoutLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBDD372DD6E1D60021D340 /* mpushTakeoutLiveActivity.swift */; };
+		7EFBDD3F2DD6E1D60021D340 /* mpushTaxiLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBDD382DD6E1D60021D340 /* mpushTaxiLiveActivity.swift */; };
+		7EFBDD402DD6E1D60021D340 /* mpushTaxiLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBDD382DD6E1D60021D340 /* mpushTaxiLiveActivity.swift */; };
+		7EFBDD412DD6E1D60021D340 /* mpushTakeoutLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBDD372DD6E1D60021D340 /* mpushTakeoutLiveActivity.swift */; };
 		C9102D251ACED5B70094FCEC /* FAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9102D151ACED5B70094FCEC /* FAImageView.m */; };
 		C9102D261ACED5B70094FCEC /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = C9102D171ACED5B70094FCEC /* NSString+FontAwesome.m */; };
 		C9102D281ACED5B70094FCEC /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9102D1A1ACED5B70094FCEC /* FontAwesome.ttf */; };
@@ -220,6 +227,12 @@
 		7EDD2EC12CD3229A00EE1883 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		7EF16B382CB8CD3B00256421 /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		7EF16B392CB8CD3B00256421 /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		7EFBDD332DD6E1D60021D340 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7EFBDD342DD6E1D60021D340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EFBDD352DD6E1D60021D340 /* mpush_liveActivity_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mpush_liveActivity_extension.swift; sourceTree = "<group>"; };
+		7EFBDD362DD6E1D60021D340 /* mpush_liveActivity_extensionBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mpush_liveActivity_extensionBundle.swift; sourceTree = "<group>"; };
+		7EFBDD372DD6E1D60021D340 /* mpushTakeoutLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mpushTakeoutLiveActivity.swift; sourceTree = "<group>"; };
+		7EFBDD382DD6E1D60021D340 /* mpushTaxiLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mpushTaxiLiveActivity.swift; sourceTree = "<group>"; };
 		C9102D141ACED5B70094FCEC /* FAImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAImageView.h; sourceTree = "<group>"; };
 		C9102D151ACED5B70094FCEC /* FAImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAImageView.m; sourceTree = "<group>"; };
 		C9102D161ACED5B70094FCEC /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
@@ -253,36 +266,6 @@
 		C9D939321ACA77F7007E7BE6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DE594F734BC46E7214E21EA1 /* Pods-mpush_content_extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mpush_content_extension.release.xcconfig"; path = "Target Support Files/Pods-mpush_content_extension/Pods-mpush_content_extension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		7ED1313F2D9D394D009C4900 /* Exceptions for "mpush_liveActivity_extension" folder in "mpush_liveActivity_extension" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 7ED1312E2D9D394C009C4900 /* mpush_liveActivity_extension */;
-		};
-		7ED131432D9D399D009C4900 /* Exceptions for "mpush_liveActivity_extension" folder in "mpush_ios_demo" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				mpushTakeoutLiveActivity.swift,
-				mpushTaxiLiveActivity.swift,
-			);
-			target = C99E765A1AC96B8B000BC567 /* mpush_ios_demo */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		7ED131322D9D394C009C4900 /* mpush_liveActivity_extension */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				7ED131432D9D399D009C4900 /* Exceptions for "mpush_liveActivity_extension" folder in "mpush_ios_demo" target */,
-				7ED1313F2D9D394D009C4900 /* Exceptions for "mpush_liveActivity_extension" folder in "mpush_liveActivity_extension" target */,
-			);
-			path = mpush_liveActivity_extension;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4AC713311DB60DF30062EE5A /* Frameworks */ = {
@@ -379,6 +362,19 @@
 				7ED130B32D9BEBD5009C4900 /* ActivityInfoViewController.xib */,
 			);
 			path = LiveActivity;
+			sourceTree = "<group>";
+		};
+		7EFBDD392DD6E1D60021D340 /* mpush_liveActivity_extension */ = {
+			isa = PBXGroup;
+			children = (
+				7EFBDD332DD6E1D60021D340 /* Assets.xcassets */,
+				7EFBDD342DD6E1D60021D340 /* Info.plist */,
+				7EFBDD352DD6E1D60021D340 /* mpush_liveActivity_extension.swift */,
+				7EFBDD362DD6E1D60021D340 /* mpush_liveActivity_extensionBundle.swift */,
+				7EFBDD372DD6E1D60021D340 /* mpushTakeoutLiveActivity.swift */,
+				7EFBDD382DD6E1D60021D340 /* mpushTaxiLiveActivity.swift */,
+			);
+			path = mpush_liveActivity_extension;
 			sourceTree = "<group>";
 		};
 		C1DC29A7E60223AA9A35ED93 /* Frameworks */ = {
@@ -558,7 +554,7 @@
 				C99E765D1AC96B8B000BC567 /* mpush_ios_demo */,
 				4AC713351DB60DF30062EE5A /* mpush_service_extension */,
 				4AC7134A1DB60E0B0062EE5A /* mpush_content_extension */,
-				7ED131322D9D394C009C4900 /* mpush_liveActivity_extension */,
+				7EFBDD392DD6E1D60021D340 /* mpush_liveActivity_extension */,
 				C99E765C1AC96B8B000BC567 /* Products */,
 				C1DC29A7E60223AA9A35ED93 /* Frameworks */,
 				F71FC4E12AEF6729511ECE65 /* Pods */,
@@ -668,9 +664,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				7ED131322D9D394C009C4900 /* mpush_liveActivity_extension */,
-			);
 			name = mpush_liveActivity_extension;
 			packageProductDependencies = (
 			);
@@ -738,6 +731,7 @@
 				};
 			};
 			buildConfigurationList = C99E76561AC96B8B000BC567 /* Build configuration list for PBXProject "mpush_ios_demo" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -746,7 +740,6 @@
 				Base,
 			);
 			mainGroup = C99E76521AC96B8B000BC567;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = C99E765C1AC96B8B000BC567 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -780,6 +773,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EFBDD3A2DD6E1D60021D340 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -893,6 +887,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EFBDD3C2DD6E1D60021D340 /* mpush_liveActivity_extension.swift in Sources */,
+				7EFBDD3D2DD6E1D60021D340 /* mpush_liveActivity_extensionBundle.swift in Sources */,
+				7EFBDD3E2DD6E1D60021D340 /* mpushTakeoutLiveActivity.swift in Sources */,
+				7EFBDD3F2DD6E1D60021D340 /* mpushTaxiLiveActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -901,6 +899,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ED7468F2D969BE600E039D3 /* LiveActivityObserver.swift in Sources */,
+				7EFBDD402DD6E1D60021D340 /* mpushTaxiLiveActivity.swift in Sources */,
+				7EFBDD412DD6E1D60021D340 /* mpushTakeoutLiveActivity.swift in Sources */,
 				7ED1E1012DD32BE4003291A0 /* SDKConfigViewController.m in Sources */,
 				7E287E5C2CCF668A009AB44F /* SQLiteManager.m in Sources */,
 				7E2E5CEE2CBCEDFC0030441B /* MessageTableViewCell.m in Sources */,
