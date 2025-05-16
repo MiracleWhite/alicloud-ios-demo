@@ -17,6 +17,7 @@
 #import "SettingAddTagViewController.h"
 #import "ShowAllTagsViewController.h"
 #import "mpush_ios_demo-Swift.h"
+#import "SDKConfigViewController.h"
 
 @interface SettingViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -277,7 +278,7 @@
 #pragma mark - UITableViewDelegate & UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 5;
+    return 6;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -308,16 +309,19 @@
             return [self configuredAliasCell];
         case 2:
         case 3:
-        case 4: {
+        case 4:
+        case 5: {
             SettingSingleTableViewCell *cell;
             if (indexPath.section == 2) {
                 cell = [SettingSingleTableViewCell cellWithType:SettingSingleCellTypeActivity];
             } else if (indexPath.section == 3) {
                 cell = [SettingSingleTableViewCell cellWithType:SettingSingleCellTypeAccount];
                 [cell setData:self.bindAccount];
-            } else {
+            } else if (indexPath.section == 4) {
                 cell = [SettingSingleTableViewCell cellWithType:SettingSingleCellTypeBadgeNumber];
                 [cell setData:self.badgeNumber];
+            } else {
+                cell = [SettingSingleTableViewCell cellWithType:SettingSingleCellTypeConfig];
             }
             return cell;
         }
@@ -377,6 +381,11 @@
                 });
             }];
         }];
+    } else if (indexPath.section == 5) {
+        // 进入SDK配置页面
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        SDKConfigViewController *configViewController = [storyboard instantiateViewControllerWithIdentifier:@"SDKConfigViewController"];
+        [self.navigationController pushViewController:configViewController animated:YES];
     }
 }
 

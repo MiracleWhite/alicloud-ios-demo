@@ -76,6 +76,20 @@
     NSDictionary *bindAccount = @{@"当前绑定账号":bindAccountString};
     [self.informationArray addObject:bindAccount];
 
+    // 当前配置的AppKey
+    NSString *appKeyString = (NSString *)[CommonTools userDefaultGet:kAppKey] ?: @"未配置AppKey";
+    NSDictionary *appKey = @{@"AppKey":appKeyString};
+    [self.informationArray addObject:appKey];
+
+    // SDK当前环境
+    NSNumber *envIndexNumber = [CommonTools userDefaultGet:kSDKEnv];
+    NSString *envString = @"生产";
+    if ([envIndexNumber integerValue] == 1) {
+        envString = @"预发";
+    }
+    NSDictionary *env = @{@"SDK环境":envString};
+    [self.informationArray addObject:env];
+
     // 刷新list
     [self.informationTableView reloadData];
 }
